@@ -8,94 +8,7 @@
 
     <!-- We need to specify the character encoding, since we use chinese characters -->
     <meta charset="UTF-8">
-
-    <!-- #2 #css #elements -->
-    <style>
-
-        /* #2 #colorful #palette is:
-          * Background: #F0F0F0 (GREY 100)
-          * Primary Text: black
-
-          * Primary color: #2F2FAF (INDIGO)
-          * Primary color_text : white
-          * Accent color: #FFFF22 (LIME)
-          * Accent color_text: black
-          */
-
-        /*global styles */
-        * {
-            /* #2 #font #faces */
-            font-family: 'Arial', sans-serif;
-        }
-
-        body {
-            /* #2 #colorful #background */
-            background-color: #F0F0F0;
-        }
-
-        h1 {
-            /* #2 #colourful #app-bar */
-            background-color: #2F2FAF;
-            color: white;
-			padding: 0 7px;
-        }
-
-        button {
-            /* #2 #colourful #plusfive */
-            background-color: #FF6222;
-            color: black;
-            /* #2 #font capital #letters */
-            text-transform: uppercase;
-			font-weight:bold;
-        }
-
-
-        /*styles for channel area*/
-        h2 {
-            /* #2 #colorful #channelandchat */
-            background-color: white;
-        }
-
-        /*styles for chat area*/
-        p {
-            /* #2 #colorful #channelandchat */
-            background-color: white;
-        }
-
-        strong {
-            /* #2 #font #locations need an extra element, we'll use strong for w3w locations */
-            text-transform: uppercase;
-        }
-
-        h3 {
-            /* #2 #font #metadata is now medium */
-            font-size: medium;
-        }
-
-        em {
-            /* #2 #font #remaining overrides the default italic appearance of em elements*/
-            font-size: larger;
-            font-style: normal;
-        }
-		/*stlyes the list items*/
-		ul {
-			list-style-type:none;
-			background-color:white;			
-		}
-		/*Sets the chats to the width and colors*/
-		.chats{
-			width:80%;
-			color:black;
-			background-color:white;
-		}
-		
-		/*Links are black in color*/
-		a{
-			color:black;
-		}
-
-    </style>
-
+ <link href="stylesheet.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -104,19 +17,21 @@
 <!-- #1 #channels #app-bar -->
 <h1><img src="https://ip.lfe.mw.tum.de/sections/moocus.png" alt="Ducky!" height="56"/>chatter|app</h1>
 
+<div class="channellist">
 <!-- #1 #channels #topics with images and alts-->
 <ul>
 <li><h2>#Yummy<img src="https://ip.lfe.mw.tum.de/sections/star-o.png" alt="not favorite"/></h2></li>
-<li><h2>#SevenContinents<img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="favorite"/></h2></li>
+<li class="selected"><h2>#SevenContinents<img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="favorite"/></h2></li>
 <li><h2>#KillerApp<img src="https://ip.lfe.mw.tum.de/sections/star-o.png" alt="not favorite"/></h2></li>
 <li><h2>#FirstPersonOnMars<img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="favorite"/></h2></li>
 <li><h2>#Octoberfest<img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="favorite"/></h2></li>
 </ul>
 <!-- #1 #channels #buttons styles and images-->
-<div style="background-color:white; width:80%" >
-<button><img src="https://ip.lfe.mw.tum.de/sections/lightbulb-o.png" alt="lightbulb"/>new</button>
-<button><img src="https://ip.lfe.mw.tum.de/sections/fire.png" alt="fire"/>trending</button>
-<button><img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="favorite"/>favorites</button>
+</div>
+<div id="tab-bar">
+<button class="buttons selected"><img src="https://ip.lfe.mw.tum.de/sections/lightbulb-o.png" alt="lightbulb"/><br />new</button>
+<button class="buttons"><img src="https://ip.lfe.mw.tum.de/sections/fire.png" alt="fire"/><br />trending</button>
+<button class="buttons"><img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="favorite"/><br />favorites</button>
 </div>
 
 <!-- chat area -->
@@ -126,11 +41,11 @@
     <small>by
         <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
         <strong>cheeses.yard.applies</strong>
-    </small>
+    </small><img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="favorite"/>
 </h1>
 
 <!-- #1 #chat #metadata contains location, weekday, day, and time -->
-<div class="chats">
+<div class="message msgselected">
 <h3>
     <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
     <strong><a href="https://map.what3words.com/cheeses.yard.applies">cheeses.yard.applies</a></strong>
@@ -143,7 +58,7 @@
 <!-- #1 #chat #button subsequent to each message -->
 <button>+5 min.</button>
 </div>
-<div class="chats">
+<div class="message">
 <!-- #1 #chat #metadata contains location, weekday, day, and time -->
 <h3>
     <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
@@ -158,7 +73,7 @@
 <!-- #1 #chat #button subsequent to each message -->
 <button>+5 min.</button>
 </div>
-<div class="chats">
+<div class="message">
 <!-- #1 #chat #metadata contains location, weekday, day, and time -->
 <h3>
     <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
@@ -172,7 +87,7 @@
 <!-- #1 #chat #button subsequent to each message -->
 <button>+5 min.</button>
 </div>
-<div class="chats">
+<div class="message">
 <!-- #1 #chat #metadata contains location, weekday, day, and time -->
 <h3>
     <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
@@ -186,7 +101,7 @@
 <!-- #1 #chat #button subsequent to each message -->
 <button>+5 min.</button>
 </div>
-<div class="chats">
+<div class="message">
 <!-- #1 #chat #metadata contains location, weekday, day, and time -->
 <h3>
     <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
@@ -200,7 +115,7 @@
 <!-- #1 #chat #button subsequent to each message -->
 <button>+5 min.</button>
 </div>
-<div class="chats">
+<div class="message">
 <!-- #1 #chat #metadata contains location, weekday, day, and time  -->
 <h3>
     <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->

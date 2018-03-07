@@ -1,0 +1,145 @@
+/* palette is:
+* Background: #F0F0F0 (GREY 100)
+* Primary Text: black
+* Primary color: #2F2FAF
+* Primary color_text : white
+* Accent color: #CDDC39
+* Accent color_text: black
+* Grid Lines: #C0C0C0
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/*Global
+These settings are used in more then one place in the page*/
+* {
+	margin:0;	 	
+	padding:0;
+	font-family: 'Roboto', 'Arial' sans-serif;
+}
+
+body {
+	background-color: #F0F0F0;
+}
+
+button {
+	color: black;
+	text-transform: uppercase;
+	font-weight:bold;
+}
+
+strong {
+	text-transform: uppercase;
+}
+
+p {
+	background-color: white;
+}
+
+/*App Bar*/
+h1 {
+	background-color: #2F2FAF;
+	color: white;
+	/*Added a little padding to the left and right to move it off the edge of the screen*/
+	padding: 0 7px;
+}
+
+/*Channels list*/
+.channellist{
+	background-color:white; 
+	color:black;
+}
+ul {
+	list-style-type:none;	
+}
+
+/*Set the borders of the tab-bar list items and buttons*/
+li.selected{
+	/*Will be removed by JS upcoming*/
+	border-left-style:solid;
+	border-left-color:#2F2FAF;
+	border-left-width: 4px;
+	/**********************/
+	border-bottom-style:solid;
+	border-bottom-color:#C0C0C0;
+	border-bottom-width: 1px;
+	color:#2F2FAF;
+}
+
+li {
+	border-bottom-style:solid;
+	border-bottom-width: 1px;
+	border-bottom-color:#C0C0C0;
+	box-sizing:border-box;
+	padding:16px;
+	font-size:16px;
+}
+
+img{
+	vertical-align: middle;
+	margin-left:3px;
+}
+
+/*Tab Bar*/
+#tab-bar{
+	background-color:white; 
+	color:black;
+}
+
+.buttons {
+	border:none;
+	background-color: white;
+	font-weight:bold;
+	font-size:13px;
+	height:72px;
+	width:33%;
+	margin:auto;
+	padding:16px;
+}
+
+.buttons img{
+	padding-bottom:4px;
+}
+
+
+/*Will be removed by JS upcoming*/
+button.selected{
+	border-bottom-style:solid;
+	border-bottom-color:#2F2FAF;
+	border-bottom-width: 4px ;	
+}
+
+/*Messages*/
+.message{
+	width:80%;
+	color:black;
+	background-color:#F0F0F0;
+	font-size:medium;
+	margin-bottom:8px;
+	margin-left: 2.5%;
+}
+.message button{
+	background-color: #CDDC39;
+	padding:2px 4px;
+	border-radius: 8px;
+}
+.message p{
+	padding: 16px 0px 16px 16px;
+}
+
+.msgselected{
+	margin-left: 17.5%;	
+}
+
+a{
+	color:black;
+}
+
+h3 {
+	font-size: medium;
+}
+
+em {
+	font-size: larger;
+	font-style: normal;
+}
